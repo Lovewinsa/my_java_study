@@ -5,7 +5,7 @@ package test.mypac;
  * 	- constructor가 없다(단독 객체 생성 불가능)
  * 	- 구현된 method는 가질 수 없다.(abstract method만 가질 수 있다.)
  * 	- field는 static final 상수만 가질 수 있다.
- * 	- data trpe의 역할을 할 수 있다.
+ * 	- data type의 역할을 할 수 있다.
  * 	- interface type의 참조값이 필요하면 구현(implement) class를 만들어서 객체를 생성해야 한다.
  * 	- class extends는 단일 extends지만, interface는 다중 구현이 가능하다.
  */
