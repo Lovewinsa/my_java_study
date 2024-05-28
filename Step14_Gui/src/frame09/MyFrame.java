@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
@@ -49,6 +50,20 @@ public class MyFrame extends JFrame implements ActionListener{
 //		newItem.addActionListener((e)->{
 //			ta.setVisible(true);
 //		});
+		
+		// 프레임의 아래쪽에 버튼 추가하기
+		JButton btn = new JButton("눌러보셈");
+		add(btn, BorderLayout.SOUTH);
+		// 버튼에 리스너 등록하기
+		btn.addActionListener((e)->{
+			System.out.println("10초 걸리는 작업을 수행중...");
+			try {
+				Thread.sleep(1000*10);
+			} catch (InterruptedException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		});
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
