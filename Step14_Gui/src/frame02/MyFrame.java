@@ -17,8 +17,6 @@ public class MyFrame extends JFrame{
 		
 		// 레이아웃 매니저 객체 생성
 		FlowLayout layout = new FlowLayout(FlowLayout.LEFT);
-		
-		
 		// 프레임의 레이아웃 매니저 설정
 		setLayout(layout);	//	FlowLayout이 LayoutManager의 interface를 implement(구현)했다.
 		

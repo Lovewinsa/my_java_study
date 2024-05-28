@@ -11,7 +11,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-public class MyFrame extends JFrame{
+public class MyFrame extends JFrame implements ActionListener{
 	JTextArea ta;
 	JMenuItem newItem;
 	public MyFrame(String title) {
@@ -41,13 +41,19 @@ public class MyFrame extends JFrame{
 		// 프레임의 메소드를 이용해서 메뉴바를 추가하기
 		setJMenuBar(mb);	// JFrame이 가지고 있는 setJMenuBar() method
 		
-		JTextArea ta = new JTextArea();
+		ta = new JTextArea();
 		this.add(ta, BorderLayout.CENTER);
 		ta.setVisible(false);
 		
-		newItem.addActionListener((e)->{
-			ta.setVisible(true);
-		});
+		newItem.addActionListener(this);
+//		newItem.addActionListener((e)->{
+//			ta.setVisible(true);
+//		});
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		ta.setVisible(true);
+		
 	}
 
 	
